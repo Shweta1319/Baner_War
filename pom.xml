@@ -37,11 +37,11 @@
    <distributionManagement>
     <repository>
       <id>nexus-snapshots</id>
-      <url>http://18.218.22.119:8081/repository/maven-snapshots/</url>
+      <url>http://ec2-18-222-185-192.us-east-2.compute.amazonaws.com:8081/repository/maven-snapshots/</url>
    </repository>
    <snapshotRepository>
       <id>nexus-snapshots</id>
-      <url>http://18.218.22.119:8081/repository/maven-snapshots/</url>
+      <url>http://ec2-18-222-185-192.us-east-2.compute.amazonaws.com:8081/repository/maven-snapshots/</url>
    </snapshotRepository>
 </distributionManagement>
   
