@@ -17,15 +17,15 @@ pipeline {
            }
 
 
-            stage('Deploy'){
+            stage('DeploytoNexus'){
                     steps{
                       sh 'mvn deploy'
                     }
              }
              
-             stage('Sonar'){
+             stage('DeploytoTomcat'){
                     steps{
-                      sh 'mvn sonar:sonar'
+                      deploy adapters: [tomcat7(credentialsId: '1de8381f-0df6-4c36-99af-467ac731a2a7', path: '', url: 'http://18.222.185.192:9090/')], contextPath: 'target', war: 'java-tomcat-maven-example.war	'
                     }
              }
 
